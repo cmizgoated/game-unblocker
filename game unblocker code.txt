@@ -1,0 +1,19 @@
+// Function to unblock games
+function unblockGames() {
+  // Get all game elements on the page
+  var gameElements = document.querySelectorAll('.game');
+
+  // Loop through each game element
+  gameElements.forEach(function(game) {
+    // Check if the game is currently blocked
+    if (game.classList.contains('blocked')) {
+      // Remove the 'blocked' class to unblock the game
+      game.classList.remove('blocked');
+      // Optionally, add a 'visible' class to show the game
+      game.classList.add('visible');
+    }
+  });
+}
+
+// Call the unblockGames function to unblock the games
+unblockGames();
